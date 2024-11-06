@@ -7,6 +7,12 @@ export default function Hero() {
 
   return (
     <div className='hero'>
+      <div style={{display: "none"}}>
+        <Link to={"/admin-panel"}>Admin</Link>
+        <Link to={"/admin-messages"}>Admin</Link>
+        <Link to={"/admin-panel"}>Admin</Link>
+        <Link to={"/admin-products"}>Admin</Link>
+      </div>
       <p style={{display: "flex", flexDirection: "column", gap: "30px"}}><h1>{t("hero-heading")}</h1>{t("hero-description")}</p>
       <button><Link style={{color: "#fff"}} to={"/contact"}>Contact us</Link></button>
     </div>

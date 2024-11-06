@@ -6,6 +6,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
     const {t} = useTranslation()
@@ -25,6 +26,7 @@ export default function Footer() {
                     <span><FaPhoneAlt />+20-15-03080608</span>
                     <span><MdOutlineEmail />Enjazrealestateinvestment@gmail.com</span>
                     <span><IoLocationSharp />{t("footer-heading-2")}</span>
+                    <span><Link style={{color: "#1c91c6"}} to={"/admin-panel"}>Go Main Home</Link></span>
                 </p>
             </div>
             </div>

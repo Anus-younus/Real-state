@@ -180,12 +180,18 @@ export default function AdminAddProductForm({ modify }) {
                                 onChange={(e) => setFile(e.target.files[0])}
                             />
                         </div>
-                        <button
-                            onClick={modify ? modifyProduct : createNewProduct}
+                        {!modify?<button
+                            onClick={createNewProduct}
                             disabled={!name || !description || !file || !productType || loading}
                         >
                             {loading ? 'Creating Product...' : 'Create Product'}
-                        </button>
+                        </button>:
+                        <button
+                            onClick={modifyProduct}
+                            disabled={!name || !description || !file || !productType || loading}
+                        >
+                            {loading ? 'Save Product...' : 'Save Product'}
+                        </button>}
                     </div>
                     <div className='contact-row-2'>
                         <img src={contact_img} alt="" />
